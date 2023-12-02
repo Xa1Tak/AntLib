@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "jIjDNQ2Hz6bbcYYpmpEcIXh0GH8vsv5y9STdl0o/AjyQbEIzWzBuyAZWMIFLxsu2HSWmL+5gyJP4m3HazRqMVA==",
+  "success": true,
+  "projectFilePath": "F:\\zxc\\MAGISTR\\3 semestr\\РИС\\Горидько\\AntLib\\AntLibConsole\\AntLibConsole.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\roman\\.nuget\\packages\\accord\\3.8.0\\accord.3.8.0.nupkg.sha512",
+    "C:\\Users\\roman\\.nuget\\packages\\accord.math\\3.8.0\\accord.math.3.8.0.nupkg.sha512",
+    "C:\\Users\\roman\\.nuget\\packages\\ilgpu\\1.4.0\\ilgpu.1.4.0.nupkg.sha512",
+    "C:\\Users\\roman\\.nuget\\packages\\ilgpu.algorithms\\1.4.0\\ilgpu.algorithms.1.4.0.nupkg.sha512",
+    "C:\\Users\\roman\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
