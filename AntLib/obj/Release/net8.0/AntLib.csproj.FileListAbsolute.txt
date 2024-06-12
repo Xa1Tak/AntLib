@@ -1,0 +1,13 @@
+F:\zxc\MAGISTR\DIPLOM\AntLib\AntLib\bin\Release\net8.0\Accord.dll.config
+F:\zxc\MAGISTR\DIPLOM\AntLib\AntLib\bin\Release\net8.0\AntLib.deps.json
+F:\zxc\MAGISTR\DIPLOM\AntLib\AntLib\bin\Release\net8.0\AntLib.dll
+F:\zxc\MAGISTR\DIPLOM\AntLib\AntLib\bin\Release\net8.0\AntLib.pdb
+F:\zxc\MAGISTR\DIPLOM\AntLib\AntLib\obj\Release\net8.0\AntLib.csproj.AssemblyReference.cache
+F:\zxc\MAGISTR\DIPLOM\AntLib\AntLib\obj\Release\net8.0\AntLib.GeneratedMSBuildEditorConfig.editorconfig
+F:\zxc\MAGISTR\DIPLOM\AntLib\AntLib\obj\Release\net8.0\AntLib.AssemblyInfoInputs.cache
+F:\zxc\MAGISTR\DIPLOM\AntLib\AntLib\obj\Release\net8.0\AntLib.AssemblyInfo.cs
+F:\zxc\MAGISTR\DIPLOM\AntLib\AntLib\obj\Release\net8.0\AntLib.csproj.CoreCompileInputs.cache
+F:\zxc\MAGISTR\DIPLOM\AntLib\AntLib\obj\Release\net8.0\AntLib.dll
+F:\zxc\MAGISTR\DIPLOM\AntLib\AntLib\obj\Release\net8.0\refint\AntLib.dll
+F:\zxc\MAGISTR\DIPLOM\AntLib\AntLib\obj\Release\net8.0\AntLib.pdb
+F:\zxc\MAGISTR\DIPLOM\AntLib\AntLib\obj\Release\net8.0\ref\AntLib.dll

@@ -1,0 +1,7 @@
+F:\zxc\MAGISTR\DIPLOM\AntLib\AntLibDemo\obj\Release\net6.0-windows7.0\AntLibDemo.csproj.AssemblyReference.cache
+F:\zxc\MAGISTR\DIPLOM\AntLib\AntLibDemo\obj\Release\net6.0-windows7.0\AntLibDemo.Form1.resources
+F:\zxc\MAGISTR\DIPLOM\AntLib\AntLibDemo\obj\Release\net6.0-windows7.0\AntLibDemo.csproj.GenerateResource.cache
+F:\zxc\MAGISTR\DIPLOM\AntLib\AntLibDemo\obj\Release\net6.0-windows7.0\AntLibDemo.GeneratedMSBuildEditorConfig.editorconfig
+F:\zxc\MAGISTR\DIPLOM\AntLib\AntLibDemo\obj\Release\net6.0-windows7.0\AntLibDemo.AssemblyInfoInputs.cache
+F:\zxc\MAGISTR\DIPLOM\AntLib\AntLibDemo\obj\Release\net6.0-windows7.0\AntLibDemo.AssemblyInfo.cs
+F:\zxc\MAGISTR\DIPLOM\AntLib\AntLibDemo\obj\Release\net6.0-windows7.0\AntLibDemo.csproj.CoreCompileInputs.cache
