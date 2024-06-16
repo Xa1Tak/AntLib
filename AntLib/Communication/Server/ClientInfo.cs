@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AntLib.Communication.Server
 {
-    internal struct ClientInfo
+    internal class ClientInfo
     {
         public string Name;
         public Command State;
@@ -21,7 +21,7 @@ namespace AntLib.Communication.Server
 
         public void ChangeState(Command command)
         {
-            State = command;
+            this.State = command;
         }
     }
 }

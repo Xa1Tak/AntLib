@@ -44,6 +44,11 @@ namespace AntLib.Communication.Server
             return _clients.Values.Where(x => x.State == state).Select(x => x.Name).ToArray();
         }
 
+        internal static ClientInfo[] GetClientInfos()
+        {
+            return _clients.Values.ToArray();
+        }
+
         internal static Guid GetClientGuid(string name)
         {
             if (_clients.ContainsKey(name))

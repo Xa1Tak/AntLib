@@ -35,6 +35,8 @@
             decodeTextBox = new TextBox();
             encodeButton = new Button();
             decodeButton = new Button();
+            changeButton = new Button();
+            setModelButton = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -83,11 +85,11 @@
             // 
             // encodeButton
             // 
-            encodeButton.Location = new Point(348, 53);
+            encodeButton.Location = new Point(364, 262);
             encodeButton.Name = "encodeButton";
-            encodeButton.Size = new Size(114, 27);
+            encodeButton.Size = new Size(75, 26);
             encodeButton.TabIndex = 5;
-            encodeButton.Text = "EncodeRandom";
+            encodeButton.Text = "Encode";
             encodeButton.UseVisualStyleBackColor = true;
             encodeButton.Click += encodeButton_Click;
             // 
@@ -101,11 +103,33 @@
             decodeButton.UseVisualStyleBackColor = true;
             decodeButton.Click += decodeButton_Click;
             // 
+            // changeButton
+            // 
+            changeButton.Location = new Point(364, 105);
+            changeButton.Name = "changeButton";
+            changeButton.Size = new Size(75, 26);
+            changeButton.TabIndex = 7;
+            changeButton.Text = "Change";
+            changeButton.UseVisualStyleBackColor = true;
+            changeButton.Click += changeButton_Click;
+            // 
+            // setModelButton
+            // 
+            setModelButton.Location = new Point(227, 12);
+            setModelButton.Name = "setModelButton";
+            setModelButton.Size = new Size(75, 23);
+            setModelButton.TabIndex = 8;
+            setModelButton.Text = "SetModel";
+            setModelButton.UseVisualStyleBackColor = true;
+            setModelButton.Click += setModelButton_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(setModelButton);
+            Controls.Add(changeButton);
             Controls.Add(decodeButton);
             Controls.Add(encodeButton);
             Controls.Add(decodeTextBox);
@@ -130,5 +154,7 @@
         private TextBox decodeTextBox;
         private Button encodeButton;
         private Button decodeButton;
+        private Button changeButton;
+        private Button setModelButton;
     }
 }

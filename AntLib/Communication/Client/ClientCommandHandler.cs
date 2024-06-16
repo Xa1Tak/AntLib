@@ -120,6 +120,7 @@ namespace AntLib.Communication.Client
                     break;
 
                 case Command.FitWithEval:
+                    SendAnswerMessage(Command.FitInProgress, "");
                     _model.SetStartTime(DateTime.Now);
                     _model.SetUpdateCount(_xTrain.Length / 10);
                     info = _model.Fit(_xTrain, _yTrain, _xTest, _yTest, Convert.ToInt32(obj) + 1, _trainSpeed);
@@ -128,6 +129,7 @@ namespace AntLib.Communication.Client
                     break;
 
                 case Command.FitWithoutEval:
+                    SendAnswerMessage(Command.FitInProgress, "");
                     _model.SetStartTime(DateTime.Now);
                     _model.SetUpdateCount(_xTrain.Length / 10);
                     info = _model.Fit(_xTrain, _yTrain, Convert.ToInt32(obj) + 1, _trainSpeed);

@@ -20,14 +20,17 @@ namespace AntLibDemo
         private IModel _enc;
         private IModel _dec;
 
-        ModelBuilder _modelBuilder;
+        private ModelBuilder _modelBuilder;
+
+        private int _examplePosition = 0;
 
         public Form1()
         {
             InitializeComponent();
-            (_xTrain, _yTrain) = ParseData("../../../../mnist_train.csv", 3000);
-            (_xTest, _yTest) = ParseData("../../../../mnist_test.csv", 1000);
+            (_xTrain, _yTrain) = ParseData("../../../../mnist_train.csv", 1000);
+            (_xTest, _yTest) = ParseData("../../../../mnist_test.csv", 100);
             BuildAutoEnc();
+            BuildEncAndDec(_autoEnc.GetLayersInfo());
             pictureBox1.Image = BitmapConverter.FloatArrayToBitmap(_xTrain[0].GetArray1D(), 28, 10);
         }
 
@@ -51,9 +54,9 @@ namespace AntLibDemo
             _autoEnc.SetUpdateCount(10000);
         }
 
-        private void BuildEncAndDec()
+        private void BuildEncAndDec(ILayerInfo[] layers)
         {
-            List<ILayerInfo> layerInfos = new List<ILayerInfo>(_autoEnc.GetLayersInfo());
+            List<ILayerInfo> layerInfos = new List<ILayerInfo>(layers);
             _modelBuilder.SetLayers(layerInfos.GetRange(0, 2).ToArray());
             _enc = _modelBuilder.BuildModel();
 
@@ -71,14 +74,12 @@ namespace AntLibDemo
         private void trainButton_Click(object sender, EventArgs e)
         {
             _autoEnc.Fit(_xTrain, _yTrain, 0.01f, 20);
-            BuildEncAndDec();
+            BuildEncAndDec(_autoEnc.GetLayersInfo());
         }
 
         private void encodeButton_Click(object sender, EventArgs e)
         {
-            int examplePosition = StaticRandom.GetNextInt(0, _xTest.Length);
-            pictureBox1.Image = BitmapConverter.FloatArrayToBitmap(_xTest[examplePosition].GetArray1D(), 28, 10);
-            encodeTextBox.Text = String.Join(' ', _enc.Predict(_xTest[examplePosition]).GetArray1D());
+            encodeTextBox.Text = String.Join(' ', _enc.Predict(_xTest[_examplePosition]).GetArray1D());
             decodeTextBox.Text = encodeTextBox.Text;
         }
 
@@ -87,6 +88,21 @@ namespace AntLibDemo
             string[] textToDecode = encodeTextBox.Text.Split(" ");
             float[] arrayToDecode = textToDecode.Select(x => Convert.ToSingle(x)).ToArray();
             pictureBox2.Image = BitmapConverter.FloatArrayToBitmap(_dec.Predict(new DataArray(arrayToDecode)).GetArray1D(), 28, 10);
+        }
+
+        private void setModelButton_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if(openFileDialog.ShowDialog(this) == DialogResult.OK)
+            {
+                BuildEncAndDec(_modelBuilder.BuildModel(File.ReadAllText(openFileDialog.FileName)).GetLayersInfo());
+            }
+        }
+
+        private void changeButton_Click(object sender, EventArgs e)
+        {
+            _examplePosition = StaticRandom.GetNextInt(0, _xTest.Length);
+            pictureBox1.Image = BitmapConverter.FloatArrayToBitmap(_xTest[_examplePosition].GetArray1D(), 28, 10);
         }
     }
 }

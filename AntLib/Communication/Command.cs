@@ -9,6 +9,7 @@ namespace AntLib.Communication
     public enum Command
     {
         ConnectionReady,
+        FitInProgress,
 
         SetTrainDataX,
         SetTrainDataY,

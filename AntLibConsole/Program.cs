@@ -119,4 +119,14 @@ internal class Program
         }
         return dataArrays;
     }
+
+    private IModel BuildLogisticregression(int numInputParams, int numOutputClassesuts)
+    {
+        ModelBuilder modelBuilder = new ModelBuilder();
+        modelBuilder.SetLoss(Loss.AbsoluteLoss);
+        modelBuilder.SetAccuracy(Accuracy.MaxElementAccuracy);
+        modelBuilder.SetFitOptimizer(new NonFitOptimizerParam());
+        modelBuilder.AddDense(AntLib.Model.Layer.ActivationFunction.ActivationFunc.Sigmoid, new AdamParam(numInputParams, numOutputClassesuts));
+        return modelBuilder.BuildModel();
+    }
 }

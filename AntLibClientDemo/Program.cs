@@ -5,11 +5,11 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        string clientName = "AntLibDemoClient";
+        string clientName = "AntLibDemoClient1";
         string serverIp = "127.0.0.1";
         int port = 1515;
         bool isParallel = true;
-        int threads = Environment.ProcessorCount;
+        int threads = Environment.ProcessorCount / 2;
         Console.WriteLine($"Hello, World! I am {clientName}. Ready to work");
         AntLibClient client = new AntLibClient(clientName, isParallel, threads);
         client.OnMessageReceive += PrineMessage;

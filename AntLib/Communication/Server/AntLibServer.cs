@@ -63,6 +63,10 @@ namespace AntLib.Communication.Server
                 case Command.ModelBuilded:
                     clientInfo += "model ready to fit";
                     break;
+
+                default:
+                    clientInfo += Enum.GetName(message.Command.GetType(), message.Command);
+                    break;
             }
 
             OnMessageReceive?.Invoke(clientInfo);

@@ -26,6 +26,8 @@ namespace AntLib.Communication.Server
 
         private DataArray[] _xTrain, _yTrain, _xTest, _yTest;
 
+        private int _fixClientCounter = 0;
+
 
 
         public ServerCommandHandler() 
@@ -113,7 +115,6 @@ namespace AntLib.Communication.Server
             var splitedTrain = ParallelModelHelper.SplitData(_xTrain, _yTrain, ClientAgregator.CLientsCount());
             SendTrainData(Command.SetTrainDataX, splitedTrain.X);
             SendTrainData(Command.SetTrainDataY, splitedTrain.Y);
-            SendAnswerMessage(Command.SetTrainDataY, Serializer.Serialize(_yTrain));
             if (_xTest == null || _yTest == null)
             {
                 _fitCommand = Command.FitWithoutEval;
@@ -165,13 +166,13 @@ namespace AntLib.Communication.Server
             SendMessageTo(Command.SetFitOptimizer, msg.SenderName, Serializer.Serialize(_modelBuilder.GetOptimizerParam()));
             SendMessageTo(Command.SetLayers, msg.SenderName, Serializer.Serialize(_modelBuilder.GetLayerInfo()));
             SendMessageTo(Command.SetTrainSpeed, msg.SenderName, Serializer.Serialize(_trainSpeed));
-            SendAnswerMessage(Command.BuildModel, "");
+            SendMessageTo(Command.BuildModel, msg.SenderName, "");
         }
 
         private void OnTakeLayerInfo(Message msg)
         {
             _modelsLayerInfo.Add((ILayerInfo[])Serializer.Deserialize(msg.Data));
-            if (ClientAgregator.IsClientWithState(Command.FitEnded) == true) return;
+            if (ClientAgregator.GetClientsNameByState(Command.TakeLayerInfo).Length != _modelsLayerInfo.Count) return;
             ILayerInfo[] combinedInfo = ParallelModelHelper.CombineModels(_modelsLayerInfo.ToArray());
             _modelBuilder.SetLayers(combinedInfo);
             _modelsLayerInfo.Clear();
@@ -180,19 +181,31 @@ namespace AntLib.Communication.Server
 
         private void OnFitEnded(Message msg)
         {
-            if (ClientAgregator.IsClientWithState(_fitCommand) == true) return;
+            _fixClientCounter++;
+            int endedCount = ClientAgregator.GetClientsNameByState(Command.FitEnded).Length;
+            int notEndedCount = ClientAgregator.GetClientsNameByState(_fitCommand).Length + 
+                ClientAgregator.GetClientsNameByState(Command.TakeFitInfo).Length +
+                ClientAgregator.GetClientsNameByState(Command.FitInProgress).Length;
+            if (notEndedCount > 0)
+            {
+                return;
+            }
             FitInfo fitInfo = (FitInfo)Serializer.Deserialize(msg.Data);
             if(fitInfo.Epoch == _epochToEndFit)
             {
+                _fixClientCounter = 0;
                 IsFiting = false;
                 return;
             }
+            _fixClientCounter = 0;
             SendAnswerMessage(Command.GetLayersInfo, "");
         }
 
         private void OnUpdateInfoEnded(Message msg)
         {
-            if (ClientAgregator.IsClientWithState(Command.FitEnded) == true) return;
+            _fixClientCounter++;
+            if (ClientAgregator.GetClientsNameByState(Command.UpdateInfoEnded).Length != _fixClientCounter) return;
+            _fixClientCounter = 0;
             Fit();
         }
     }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AntLib")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e302c3f00f42c37d4d1695c18e48f213d6aeb124")]
 [assembly: System.Reflection.AssemblyProductAttribute("AntLib")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AntLib")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

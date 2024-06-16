@@ -18,12 +18,13 @@ internal class Program
     private static DataArray[] _yTest;
     private static void Main(string[] args)
     {
+        int count = 1;
         string ip = "127.0.0.1";
         int port = 1515;
         string serverName = "AntLibDemoServer";
         BuildBuilder();
-        (_xTrain, _yTrain) = ParseData("../../../../mnist_train.csv", 3000);
-        (_xTest, _yTest) = ParseData("../../../../mnist_test.csv", 1000);
+        (_xTrain, _yTrain) = ParseData("../mnist_train.csv", 1000);
+        (_xTest, _yTest) = ParseData("../mnist_test.csv", 100);
 
         AntLibServer server = new AntLibServer(serverName, ip, port);
         server.SetTrainData(_xTrain, _yTrain, _xTest, _yTest);
@@ -33,9 +34,17 @@ internal class Program
         Console.WriteLine($"Hello, World! I am {serverName}. Model params:");
         Console.WriteLine(_modelBuilder.GetSummaryInfo());
         Console.WriteLine("Press Enter when all clients connected for 20 epoch");
-        Console.ReadKey();
-        Console.WriteLine("Working");
-        server.Fit(20);
+        File.WriteAllText("model_Without_Train", _modelBuilder.BuildModel().ToJson());
+        while (true)
+        {
+            Console.ReadKey();
+            Console.WriteLine("Working");
+            server.Fit(20);
+            Console.ReadKey();
+            _modelBuilder.SetLayers(server.GetModelInfo());
+            File.WriteAllText($"model{count}",_modelBuilder.BuildModel().ToJson());
+            count++;
+        }
 
         Console.ReadKey();
     }
