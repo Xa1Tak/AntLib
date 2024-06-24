@@ -1,0 +1,533 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "Accord/3.8.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Accord.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Accord.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/Accord.targets": {}
+        }
+      },
+      "Accord.Math/3.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Accord": "3.8.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Accord.Math.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/netstandard2.0/Accord.Math.dll": {
+            "related": ".Core.xml;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Accord.Math.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/netstandard2.0/Accord.Math.dll": {
+            "related": ".Core.xml;.xml"
+          }
+        }
+      },
+      "ComputeSharp/3.0.1": {
+        "type": "package",
+        "dependencies": {
+          "ComputeSharp.Core": "3.0.1"
+        },
+        "compile": {
+          "lib/net8.0/ComputeSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/ComputeSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/ComputeSharp.targets": {}
+        }
+      },
+      "ComputeSharp.Core/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/ComputeSharp.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/ComputeSharp.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/ComputeSharp.Core.targets": {}
+        }
+      },
+      "ComputeSharp.D2D1/3.0.1": {
+        "type": "package",
+        "dependencies": {
+          "ComputeSharp.Core": "3.0.1"
+        },
+        "compile": {
+          "lib/net8.0/ComputeSharp.D2D1.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/ComputeSharp.D2D1.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/ComputeSharp.D2D1.targets": {}
+        }
+      },
+      "ComputeSharp.Dynamic/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "ComputeSharp": "2.1.0"
+        },
+        "compile": {
+          "lib/net6.0/ComputeSharp.Dynamic.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/ComputeSharp.Dynamic.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/dxcompiler.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-arm64/native/dxil.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-x64/native/dxcompiler.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/dxil.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          }
+        }
+      },
+      "ComputeSharp.Pix/3.0.1": {
+        "type": "package",
+        "dependencies": {
+          "ComputeSharp": "3.0.1"
+        },
+        "compile": {
+          "lib/net8.0/ComputeSharp.Pix.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/ComputeSharp.Pix.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/ComputeSharp.Pix.targets": {}
+        }
+      },
+      "ILGPU/1.5.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/ILGPU.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/ILGPU.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ILGPU.Algorithms/1.5.1": {
+        "type": "package",
+        "dependencies": {
+          "ILGPU": "1.5.1"
+        },
+        "compile": {
+          "lib/net7.0/ILGPU.Algorithms.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/ILGPU.Algorithms.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Accord/3.8.0": {
+      "sha512": "7kJrB570dO5ELim+2KWQNozuvWO9/BuZfZspdFy36fcWPNF2CEccblLuILeUlI8QJYd2DlBy0bfK8BlCx/uayA==",
+      "type": "package",
+      "path": "accord/3.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "accord.3.8.0.nupkg.sha512",
+        "accord.nuspec",
+        "build/Accord.dll.config",
+        "build/Accord.targets",
+        "lib/net35-unity full v3.5/Accord.dll",
+        "lib/net35-unity full v3.5/Accord.xml",
+        "lib/net35-unity micro v3.5/Accord.dll",
+        "lib/net35-unity micro v3.5/Accord.xml",
+        "lib/net35-unity subset v3.5/Accord.dll",
+        "lib/net35-unity subset v3.5/Accord.xml",
+        "lib/net35-unity web v3.5/Accord.dll",
+        "lib/net35-unity web v3.5/Accord.xml",
+        "lib/net35/Accord.dll",
+        "lib/net35/Accord.xml",
+        "lib/net40/Accord.dll",
+        "lib/net40/Accord.xml",
+        "lib/net45/Accord.dll",
+        "lib/net45/Accord.xml",
+        "lib/net46/Accord.dll",
+        "lib/net46/Accord.xml",
+        "lib/net462/Accord.dll",
+        "lib/net462/Accord.xml",
+        "lib/netstandard1.4/Accord.dll",
+        "lib/netstandard1.4/Accord.xml",
+        "lib/netstandard2.0/Accord.dll",
+        "lib/netstandard2.0/Accord.xml"
+      ]
+    },
+    "Accord.Math/3.8.0": {
+      "sha512": "K3dzeQjDIrwRnoTRoMOoIbul2Uc0B8cnEtdrSlirmIo37C+jVkmYpJzme/z4Kg99XR2Vj5W5TTNlhjn+AKR+8A==",
+      "type": "package",
+      "path": "accord.math/3.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "accord.math.3.8.0.nupkg.sha512",
+        "accord.math.nuspec",
+        "lib/net35-unity full v3.5/Accord.Math.Core.dll",
+        "lib/net35-unity full v3.5/Accord.Math.Core.xml",
+        "lib/net35-unity full v3.5/Accord.Math.dll",
+        "lib/net35-unity full v3.5/Accord.Math.xml",
+        "lib/net35-unity micro v3.5/Accord.Math.Core.dll",
+        "lib/net35-unity micro v3.5/Accord.Math.Core.xml",
+        "lib/net35-unity micro v3.5/Accord.Math.dll",
+        "lib/net35-unity micro v3.5/Accord.Math.xml",
+        "lib/net35-unity subset v3.5/Accord.Math.Core.dll",
+        "lib/net35-unity subset v3.5/Accord.Math.Core.xml",
+        "lib/net35-unity subset v3.5/Accord.Math.dll",
+        "lib/net35-unity subset v3.5/Accord.Math.xml",
+        "lib/net35-unity web v3.5/Accord.Math.Core.dll",
+        "lib/net35-unity web v3.5/Accord.Math.Core.xml",
+        "lib/net35-unity web v3.5/Accord.Math.dll",
+        "lib/net35-unity web v3.5/Accord.Math.xml",
+        "lib/net35/Accord.Math.Core.dll",
+        "lib/net35/Accord.Math.Core.xml",
+        "lib/net35/Accord.Math.dll",
+        "lib/net35/Accord.Math.xml",
+        "lib/net40/Accord.Math.Core.dll",
+        "lib/net40/Accord.Math.Core.xml",
+        "lib/net40/Accord.Math.dll",
+        "lib/net40/Accord.Math.xml",
+        "lib/net45/Accord.Math.Core.dll",
+        "lib/net45/Accord.Math.Core.xml",
+        "lib/net45/Accord.Math.dll",
+        "lib/net45/Accord.Math.xml",
+        "lib/net46/Accord.Math.Core.dll",
+        "lib/net46/Accord.Math.Core.xml",
+        "lib/net46/Accord.Math.dll",
+        "lib/net46/Accord.Math.xml",
+        "lib/net462/Accord.Math.Core.dll",
+        "lib/net462/Accord.Math.Core.xml",
+        "lib/net462/Accord.Math.dll",
+        "lib/net462/Accord.Math.xml",
+        "lib/netstandard1.4/Accord.Math.Core.dll",
+        "lib/netstandard1.4/Accord.Math.Core.xml",
+        "lib/netstandard1.4/Accord.Math.dll",
+        "lib/netstandard1.4/Accord.Math.xml",
+        "lib/netstandard2.0/Accord.Math.Core.dll",
+        "lib/netstandard2.0/Accord.Math.Core.xml",
+        "lib/netstandard2.0/Accord.Math.dll",
+        "lib/netstandard2.0/Accord.Math.xml"
+      ]
+    },
+    "ComputeSharp/3.0.1": {
+      "sha512": "MhZnKzZFblvnpl0GPDQbwKhhaBy1KmrRkV5a+Qsp/9yDna4r8BhXgNUpwkk8q61/httnj23eKkcp3Nojm1hIzQ==",
+      "type": "package",
+      "path": "computesharp/3.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "analyzers/dotnet/cs/ComputeSharp.CodeFixers.dll",
+        "analyzers/dotnet/cs/ComputeSharp.SourceGenerators.dll",
+        "build/ComputeSharp.targets",
+        "buildTransitive/ComputeSharp.targets",
+        "computesharp.3.0.1.nupkg.sha512",
+        "computesharp.nuspec",
+        "icon.png",
+        "lib/net8.0/ComputeSharp.dll",
+        "lib/net8.0/ComputeSharp.xml"
+      ]
+    },
+    "ComputeSharp.Core/3.0.1": {
+      "sha512": "sXFBL6fbrV+E9NRIvaCDXO8fxeXrnMWLnPoECu7VjcIKduL3AbQnhKo0rEboQmpbkbFljlqP3xOzsdBkbaBpLA==",
+      "type": "package",
+      "path": "computesharp.core/3.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "analyzers/dotnet/cs/ComputeSharp.Core.SourceGenerators.dll",
+        "build/ComputeSharp.Core.targets",
+        "buildTransitive/ComputeSharp.Core.targets",
+        "computesharp.core.3.0.1.nupkg.sha512",
+        "computesharp.core.nuspec",
+        "icon.png",
+        "lib/net8.0/ComputeSharp.Core.dll",
+        "lib/net8.0/ComputeSharp.Core.xml"
+      ]
+    },
+    "ComputeSharp.D2D1/3.0.1": {
+      "sha512": "wpGh8NSg69xqfU/1WXh2LfHkYh8treMbwmGwIH7v16zGdEQ5dx0eV8LSjade4c9YbGjr3YBQLIpk5dOrpA2U2w==",
+      "type": "package",
+      "path": "computesharp.d2d1/3.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "analyzers/dotnet/cs/ComputeSharp.D2D1.CodeFixers.dll",
+        "analyzers/dotnet/cs/ComputeSharp.D2D1.SourceGenerators.dll",
+        "build/ComputeSharp.D2D1.targets",
+        "buildTransitive/ComputeSharp.D2D1.targets",
+        "computesharp.d2d1.3.0.1.nupkg.sha512",
+        "computesharp.d2d1.nuspec",
+        "icon.png",
+        "lib/net8.0/ComputeSharp.D2D1.dll",
+        "lib/net8.0/ComputeSharp.D2D1.xml"
+      ]
+    },
+    "ComputeSharp.Dynamic/2.1.0": {
+      "sha512": "QeKJdT4UMMGfXr8DcQJJsTN3q0V15HlVGnXHURqlIbU16xkNhCENPwu5hPnG5hsjvuaNQxOTD2HH00YbiFP0YQ==",
+      "type": "package",
+      "path": "computesharp.dynamic/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "computesharp.dynamic.2.1.0.nupkg.sha512",
+        "computesharp.dynamic.nuspec",
+        "icon.png",
+        "lib/net6.0/ComputeSharp.Dynamic.dll",
+        "lib/net6.0/ComputeSharp.Dynamic.xml",
+        "lib/netstandard2.0/ComputeSharp.Dynamic.dll",
+        "lib/netstandard2.0/ComputeSharp.Dynamic.xml",
+        "runtimes/win-arm64/native/dxcompiler.dll",
+        "runtimes/win-arm64/native/dxil.dll",
+        "runtimes/win-x64/native/dxcompiler.dll",
+        "runtimes/win-x64/native/dxil.dll"
+      ]
+    },
+    "ComputeSharp.Pix/3.0.1": {
+      "sha512": "nDQ570Fx4Fu3efTHACBQuBjxwtzEvJKTDb2T/nmKrLP0djNB8pzHE8KClInwmTDIAdMRJxiTxQe7CTzqa53TDQ==",
+      "type": "package",
+      "path": "computesharp.pix/3.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "build/ComputeSharp.Pix.targets",
+        "buildTransitive/ComputeSharp.Pix.targets",
+        "computesharp.pix.3.0.1.nupkg.sha512",
+        "computesharp.pix.nuspec",
+        "icon.png",
+        "lib/net8.0/ComputeSharp.Pix.dll",
+        "lib/net8.0/ComputeSharp.Pix.xml",
+        "winpixeventruntime.1.0.231030001/arm64/WinPixEventRuntime.dll",
+        "winpixeventruntime.1.0.231030001/arm64/WinPixEventRuntime_UAP.dll",
+        "winpixeventruntime.1.0.231030001/x64/WinPixEventRuntime.dll",
+        "winpixeventruntime.1.0.231030001/x64/WinPixEventRuntime_UAP.dll"
+      ]
+    },
+    "ILGPU/1.5.1": {
+      "sha512": "Q4URSxEqH+u0XE3XCtYZ2h3FZgLp9VOOeelvKCmniiTlKft0JNCs13EOqayWVjwvPUbD4w/XaFlP3CdmaRdj8w==",
+      "type": "package",
+      "path": "ilgpu/1.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE-3RD-PARTY.txt",
+        "LICENSE.txt",
+        "ilgpu.1.5.1.nupkg.sha512",
+        "ilgpu.nuspec",
+        "lib/net471/ILGPU.dll",
+        "lib/net471/ILGPU.pdb",
+        "lib/net471/ILGPU.xml",
+        "lib/net5.0/ILGPU.dll",
+        "lib/net5.0/ILGPU.xml",
+        "lib/net6.0/ILGPU.dll",
+        "lib/net6.0/ILGPU.xml",
+        "lib/net7.0/ILGPU.dll",
+        "lib/net7.0/ILGPU.xml",
+        "lib/netstandard2.1/ILGPU.dll",
+        "lib/netstandard2.1/ILGPU.xml"
+      ]
+    },
+    "ILGPU.Algorithms/1.5.1": {
+      "sha512": "PCoyiLrku1GXWJFU7XNQiTLYmwm5igHpzW6dv+5pBQcm8Ufav0V1jXtnWme/WuE8mlC1fkpHWspEUJdltgrYSg==",
+      "type": "package",
+      "path": "ilgpu.algorithms/1.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE-3RD-PARTY.txt",
+        "LICENSE.txt",
+        "ilgpu.algorithms.1.5.1.nupkg.sha512",
+        "ilgpu.algorithms.nuspec",
+        "lib/net471/ILGPU.Algorithms.dll",
+        "lib/net471/ILGPU.Algorithms.pdb",
+        "lib/net471/ILGPU.Algorithms.xml",
+        "lib/net5.0/ILGPU.Algorithms.dll",
+        "lib/net5.0/ILGPU.Algorithms.xml",
+        "lib/net6.0/ILGPU.Algorithms.dll",
+        "lib/net6.0/ILGPU.Algorithms.xml",
+        "lib/net7.0/ILGPU.Algorithms.dll",
+        "lib/net7.0/ILGPU.Algorithms.xml",
+        "lib/netstandard2.1/ILGPU.Algorithms.dll",
+        "lib/netstandard2.1/ILGPU.Algorithms.xml"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "Accord >= 3.8.0",
+      "Accord.Math >= 3.8.0",
+      "ComputeSharp >= 3.0.1",
+      "ComputeSharp.Core >= 3.0.1",
+      "ComputeSharp.D2D1 >= 3.0.1",
+      "ComputeSharp.Dynamic >= 2.1.0",
+      "ComputeSharp.Pix >= 3.0.1",
+      "ILGPU.Algorithms >= 1.5.1"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\roman\\.nuget\\packages\\": {},
+    "D:\\VisualStudioShared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "F:\\zxc\\MAGISTR\\DIPLOM\\AntLib\\AntLibGPUTest\\AntLibGPUTest.csproj",
+      "projectName": "AntLibGPUTest",
+      "projectPath": "F:\\zxc\\MAGISTR\\DIPLOM\\AntLib\\AntLibGPUTest\\AntLibGPUTest.csproj",
+      "packagesPath": "C:\\Users\\roman\\.nuget\\packages\\",
+      "outputPath": "F:\\zxc\\MAGISTR\\DIPLOM\\AntLib\\AntLibGPUTest\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\VisualStudioShared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\roman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "dependencies": {
+          "Accord": {
+            "target": "Package",
+            "version": "[3.8.0, )"
+          },
+          "Accord.Math": {
+            "target": "Package",
+            "version": "[3.8.0, )"
+          },
+          "ComputeSharp": {
+            "target": "Package",
+            "version": "[3.0.1, )"
+          },
+          "ComputeSharp.Core": {
+            "target": "Package",
+            "version": "[3.0.1, )"
+          },
+          "ComputeSharp.D2D1": {
+            "target": "Package",
+            "version": "[3.0.1, )"
+          },
+          "ComputeSharp.Dynamic": {
+            "target": "Package",
+            "version": "[2.1.0, )"
+          },
+          "ComputeSharp.Pix": {
+            "target": "Package",
+            "version": "[3.0.1, )"
+          },
+          "ILGPU.Algorithms": {
+            "target": "Package",
+            "version": "[1.5.1, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

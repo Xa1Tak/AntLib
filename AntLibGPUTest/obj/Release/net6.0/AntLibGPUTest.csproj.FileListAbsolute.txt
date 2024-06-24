@@ -1,0 +1,6 @@
+F:\zxc\MAGISTR\DIPLOM\AntLib\AntLibGPUTest\obj\Release\net6.0\AntLibGPUTest.csproj.AssemblyReference.cache
+F:\zxc\MAGISTR\DIPLOM\AntLib\AntLibGPUTest\obj\Release\net6.0\AntLibGPUTest.GeneratedMSBuildEditorConfig.editorconfig
+F:\zxc\MAGISTR\DIPLOM\AntLib\AntLibGPUTest\obj\Release\net6.0\AntLibGPUTest.AssemblyInfoInputs.cache
+F:\zxc\MAGISTR\DIPLOM\AntLib\AntLibGPUTest\obj\Release\net6.0\AntLibGPUTest.AssemblyInfo.cs
+F:\zxc\MAGISTR\DIPLOM\AntLib\AntLibGPUTest\obj\Release\net6.0\AntLibGPUTest.csproj.CoreCompileInputs.cache
+F:\zxc\MAGISTR\DIPLOM\AntLib\AntLibGPUTest\obj\Release\net6.0\AntLibGPUTest.sourcelink.json

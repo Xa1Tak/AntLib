@@ -12,9 +12,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AntLibConsole", "AntLibCons
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AntLibDemo", "AntLibDemo\AntLibDemo.csproj", "{2882ACF8-E400-44B9-AA04-7E773C26C2AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntLibServerDemo", "AntLibServerDemo\AntLibServerDemo.csproj", "{60417D73-30AC-4B2A-BB3B-9E92C2431F36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AntLibServerDemo", "AntLibServerDemo\AntLibServerDemo.csproj", "{60417D73-30AC-4B2A-BB3B-9E92C2431F36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntLibClientDemo", "AntLibClientDemo\AntLibClientDemo.csproj", "{C02ABC87-8041-43EA-A7CF-5F172C72B317}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AntLibClientDemo", "AntLibClientDemo\AntLibClientDemo.csproj", "{C02ABC87-8041-43EA-A7CF-5F172C72B317}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntLibGPUTest", "AntLibGPUTest\AntLibGPUTest.csproj", "{615FB0B3-A78A-44CB-8ECA-09D3DBDB55E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +44,10 @@ Global
 		{C02ABC87-8041-43EA-A7CF-5F172C72B317}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C02ABC87-8041-43EA-A7CF-5F172C72B317}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C02ABC87-8041-43EA-A7CF-5F172C72B317}.Release|Any CPU.Build.0 = Release|Any CPU
+		{615FB0B3-A78A-44CB-8ECA-09D3DBDB55E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{615FB0B3-A78A-44CB-8ECA-09D3DBDB55E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{615FB0B3-A78A-44CB-8ECA-09D3DBDB55E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{615FB0B3-A78A-44CB-8ECA-09D3DBDB55E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
