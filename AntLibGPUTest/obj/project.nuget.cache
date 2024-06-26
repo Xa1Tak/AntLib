@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "DykfXEb0q/QAGzfVJJv5qyw3uZyNO4x1T1gR373M5u/c8L6+BZUTIvmp9MngNDIHzJdxzqil+JArcLmp0zNtBQ==",
+  "success": true,
+  "projectFilePath": "F:\\zxc\\MAGISTR\\DIPLOM\\AntLib\\AntLibGPUTest\\AntLibGPUTest.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\roman\\.nuget\\packages\\accord\\3.8.0\\accord.3.8.0.nupkg.sha512",
+    "C:\\Users\\roman\\.nuget\\packages\\accord.math\\3.8.0\\accord.math.3.8.0.nupkg.sha512",
+    "C:\\Users\\roman\\.nuget\\packages\\computesharp\\3.0.1\\computesharp.3.0.1.nupkg.sha512",
+    "C:\\Users\\roman\\.nuget\\packages\\computesharp.core\\3.0.1\\computesharp.core.3.0.1.nupkg.sha512",
+    "C:\\Users\\roman\\.nuget\\packages\\computesharp.d2d1\\3.0.1\\computesharp.d2d1.3.0.1.nupkg.sha512",
+    "C:\\Users\\roman\\.nuget\\packages\\computesharp.dynamic\\2.1.0\\computesharp.dynamic.2.1.0.nupkg.sha512",
+    "C:\\Users\\roman\\.nuget\\packages\\computesharp.pix\\3.0.1\\computesharp.pix.3.0.1.nupkg.sha512",
+    "C:\\Users\\roman\\.nuget\\packages\\ilgpu\\1.5.1\\ilgpu.1.5.1.nupkg.sha512",
+    "C:\\Users\\roman\\.nuget\\packages\\ilgpu.algorithms\\1.5.1\\ilgpu.algorithms.1.5.1.nupkg.sha512"
+  ],
+  "logs": []
+}

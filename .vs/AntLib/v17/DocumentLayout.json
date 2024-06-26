@@ -7,20 +7,12 @@
       "RelativeMoniker": "D:0:0:{615FB0B3-A78A-44CB-8ECA-09D3DBDB55E1}|AntLibGPUTest\\AntLibGPUTest.csproj|solutionrelative:antlibgputest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{615FB0B3-A78A-44CB-8ECA-09D3DBDB55E1}|AntLibGPUTest\\AntLibGPUTest.csproj|F:\\zxc\\MAGISTR\\DIPLOM\\AntLib\\antlibgputest\\antlibgputest.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{615FB0B3-A78A-44CB-8ECA-09D3DBDB55E1}|AntLibGPUTest\\AntLibGPUTest.csproj|solutionrelative:antlibgputest\\antlibgputest.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{D9FA1A13-248B-4A60-BC8A-21ACBD9F952E}|AntLib\\AntLib.csproj|F:\\zxc\\MAGISTR\\DIPLOM\\AntLib\\antlib\\model\\layer\\layeroptimizer\\adam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9FA1A13-248B-4A60-BC8A-21ACBD9F952E}|AntLib\\AntLib.csproj|solutionrelative:antlib\\model\\layer\\layeroptimizer\\adam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D9FA1A13-248B-4A60-BC8A-21ACBD9F952E}|AntLib\\AntLib.csproj|F:\\zxc\\MAGISTR\\DIPLOM\\AntLib\\antlib\\model\\layer\\layeroptimizer\\adamparam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D9FA1A13-248B-4A60-BC8A-21ACBD9F952E}|AntLib\\AntLib.csproj|solutionrelative:antlib\\model\\layer\\layeroptimizer\\adamparam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D9FA1A13-248B-4A60-BC8A-21ACBD9F952E}|AntLib\\AntLib.csproj|F:\\zxc\\MAGISTR\\DIPLOM\\AntLib\\antlib\\model\\layer\\denselayerinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9FA1A13-248B-4A60-BC8A-21ACBD9F952E}|AntLib\\AntLib.csproj|solutionrelative:antlib\\model\\layer\\denselayerinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D9FA1A13-248B-4A60-BC8A-21ACBD9F952E}|AntLib\\AntLib.csproj|F:\\zxc\\MAGISTR\\DIPLOM\\AntLib\\antlib\\model\\layer\\layeroptimizer\\adam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9FA1A13-248B-4A60-BC8A-21ACBD9F952E}|AntLib\\AntLib.csproj|solutionrelative:antlib\\model\\layer\\layeroptimizer\\adam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,42 +22,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AntLibGPUTest",
-              "DocumentMoniker": "F:\\zxc\\MAGISTR\\DIPLOM\\AntLib\\AntLibGPUTest\\AntLibGPUTest.csproj",
-              "RelativeDocumentMoniker": "AntLibGPUTest\\AntLibGPUTest.csproj",
-              "ToolTip": "F:\\zxc\\MAGISTR\\DIPLOM\\AntLib\\AntLibGPUTest\\AntLibGPUTest.csproj",
-              "RelativeToolTip": "AntLibGPUTest\\AntLibGPUTest.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-06-24T16:23:52.617Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Adam.cs",
               "DocumentMoniker": "F:\\zxc\\MAGISTR\\DIPLOM\\AntLib\\AntLib\\Model\\Layer\\LayerOptimizer\\Adam.cs",
               "RelativeDocumentMoniker": "AntLib\\Model\\Layer\\LayerOptimizer\\Adam.cs",
               "ToolTip": "F:\\zxc\\MAGISTR\\DIPLOM\\AntLib\\AntLib\\Model\\Layer\\LayerOptimizer\\Adam.cs",
               "RelativeToolTip": "AntLib\\Model\\Layer\\LayerOptimizer\\Adam.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAAAowAAAAAAAAAAA",
+              "ViewState": "AQIAADYAAAAAAAAAAAAowEYAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T15:46:16.821Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DenseLayerInfo.cs",
-              "DocumentMoniker": "F:\\zxc\\MAGISTR\\DIPLOM\\AntLib\\AntLib\\Model\\Layer\\DenseLayerInfo.cs",
-              "RelativeDocumentMoniker": "AntLib\\Model\\Layer\\DenseLayerInfo.cs",
-              "ToolTip": "F:\\zxc\\MAGISTR\\DIPLOM\\AntLib\\AntLib\\Model\\Layer\\DenseLayerInfo.cs",
-              "RelativeToolTip": "AntLib\\Model\\Layer\\DenseLayerInfo.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T15:39:52.653Z"
+              "WhenOpened": "2024-06-24T15:46:16.821Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -75,9 +45,10 @@
               "RelativeDocumentMoniker": "AntLib\\Model\\Layer\\LayerOptimizer\\AdamParam.cs",
               "ToolTip": "F:\\zxc\\MAGISTR\\DIPLOM\\AntLib\\AntLib\\Model\\Layer\\LayerOptimizer\\AdamParam.cs",
               "RelativeToolTip": "AntLib\\Model\\Layer\\LayerOptimizer\\AdamParam.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAAIwDkAAAAUAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T15:39:31.867Z"
+              "WhenOpened": "2024-06-24T15:39:31.867Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -87,7 +58,7 @@
               "RelativeDocumentMoniker": "AntLibGPUTest\\Program.cs",
               "ToolTip": "F:\\zxc\\MAGISTR\\DIPLOM\\AntLib\\AntLibGPUTest\\Program.cs",
               "RelativeToolTip": "AntLibGPUTest\\Program.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAowB0AAAAYAAAA",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAcwBwAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-24T15:25:22.791Z",
               "EditorCaption": ""
