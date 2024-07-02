@@ -6,6 +6,7 @@ using AntLib.Model.Layer.LayerOptimizer;
 using AntLib.Model.ModelAccuracy;
 using AntLib.Model.ModelLoss;
 using AntLib.Tools;
+using System.Diagnostics;
 
 namespace AntLibDemo
 {
@@ -27,11 +28,22 @@ namespace AntLibDemo
         public Form1()
         {
             InitializeComponent();
+            var devices = Booster.GetCudaDevices();
+            //Booster.DoBoost(devices[0]);
             (_xTrain, _yTrain) = ParseData("../../../../mnist_train.csv", 1000);
             (_xTest, _yTest) = ParseData("../../../../mnist_test.csv", 100);
             BuildAutoEnc();
             BuildEncAndDec(_autoEnc.GetLayersInfo());
             pictureBox1.Image = BitmapConverter.FloatArrayToBitmap(_xTrain[0].GetArray1D(), 28, 10);
+            Tester test = new Tester();
+            Stopwatch stopwatch = new Stopwatch();
+
+            stopwatch.Start();
+            //test.TestAdam(_xTrain[0], 5000);
+            //test.TestAdamBack(_xTrain[0], 5000);
+            //test.TestAdamFull(_xTrain, 1);
+            stopwatch.Stop();
+            Console.WriteLine(stopwatch.Elapsed.TotalSeconds);
         }
 
         private void BuildAutoEnc()
@@ -41,10 +53,10 @@ namespace AntLibDemo
             _modelBuilder.SetAccuracy(Accuracy.MaxElementAccuracy);
             _modelBuilder.SetFitOptimizer(new NonFitOptimizerParam());
 
-            _modelBuilder.AddDense(AntLib.Model.Layer.ActivationFunction.ActivationFunc.Sigmoid, new NonLayerOptimizerParam(784, 200));
-            _modelBuilder.AddDense(AntLib.Model.Layer.ActivationFunction.ActivationFunc.Sigmoid, new NonLayerOptimizerParam(200, 100));
-            _modelBuilder.AddDense(AntLib.Model.Layer.ActivationFunction.ActivationFunc.Sigmoid, new NonLayerOptimizerParam(100, 200));
-            _modelBuilder.AddDense(AntLib.Model.Layer.ActivationFunction.ActivationFunc.Sigmoid, new NonLayerOptimizerParam(200, 784));
+            _modelBuilder.AddDense(AntLib.Model.Layer.ActivationFunction.ActivationFunc.Sigmoid, new AdamParam(784, 200));
+            _modelBuilder.AddDense(AntLib.Model.Layer.ActivationFunction.ActivationFunc.Sigmoid, new AdamParam(200, 100));
+            _modelBuilder.AddDense(AntLib.Model.Layer.ActivationFunction.ActivationFunc.Sigmoid, new AdamParam(100, 200));
+            _modelBuilder.AddDense(AntLib.Model.Layer.ActivationFunction.ActivationFunc.Sigmoid, new AdamParam(200, 784));
 
             Console.WriteLine(_modelBuilder.GetSummaryInfo());
 
@@ -73,20 +85,23 @@ namespace AntLibDemo
 
         private void trainButton_Click(object sender, EventArgs e)
         {
-            _autoEnc.Fit(_xTrain, _yTrain, 0.01f, 20);
+            _autoEnc.Fit(_xTrain, _yTrain, 0.001f, 20);
             BuildEncAndDec(_autoEnc.GetLayersInfo());
         }
 
         private void encodeButton_Click(object sender, EventArgs e)
         {
-            encodeTextBox.Text = String.Join(' ', _enc.Predict(_xTest[_examplePosition]).GetArray1D());
+            DataArray testExmpl = _xTest[_examplePosition];
+            DataArray pred = _enc.Predict(testExmpl);
+            float[] convPred = pred.GetArray1D();
+            encodeTextBox.Text = String.Join(' ', convPred);
             decodeTextBox.Text = encodeTextBox.Text;
         }
 
         private void decodeButton_Click(object sender, EventArgs e)
         {
             string[] textToDecode = encodeTextBox.Text.Split(" ");
-            float[] arrayToDecode = textToDecode.Select(x => Convert.ToSingle(x)).ToArray();
+            float[] arrayToDecode = textToDecode.Select(Convert.ToSingle).ToArray();
             pictureBox2.Image = BitmapConverter.FloatArrayToBitmap(_dec.Predict(new DataArray(arrayToDecode)).GetArray1D(), 28, 10);
         }
 

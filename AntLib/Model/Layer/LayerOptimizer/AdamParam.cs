@@ -1,6 +1,8 @@
 ﻿using Accord.IO;
 using Accord.Math;
 using AntLib.Model.Layer.Optimizer;
+using AntLib.Model.ModelOptimizer;
+using AntLib.Tools;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +20,7 @@ namespace AntLib.Model.Layer.LayerOptimizer
         internal float _e = 0.0000001f;
         internal float _b1 = 0.9f;
         internal float _b2 = 0.999f;
+
 
         internal AdamParam()
         {
@@ -60,8 +63,21 @@ namespace AntLib.Model.Layer.LayerOptimizer
             _to = 1;
         }
 
+        internal ILayerOptimizer GetAdam()
+        {
+            if (Booster.IsBoosted() == true)
+            {
+                return new AdamGPU(this);
+            }
+            return new Adam(this);
+        }
+
         ILayerOptimizer ILayerOptimizerParam.GetOptimizer()
         {
+            if(Booster.IsBoosted() == true)
+            {
+                return new AdamGPU(this);
+            }
             return new Adam(this);
             //return new Adam((AdamParam)this.Clone());
         }

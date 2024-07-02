@@ -127,7 +127,7 @@ namespace AntLib.Model
             for (int i = 0; i < X.Length; i++)
             {
                 prediction = _m.Predict(X[i]);
-                error = prediction - Y[i];
+                error = prediction.Subtract(Y[i]);
                 result.TestLoss += _loss.CalcLoss(error);
                 result.TestAccuracy = _accuracy.CalcAccuracy(prediction, Y[i]);
             }
@@ -170,10 +170,10 @@ namespace AntLib.Model
                 {
                     layersOutput[l] = _layers[l].Forward(layersOutput[l - 1]);
                 }
-                error = layersOutput[layersOutput.Length - 1] - YTrain[d];
+                error = layersOutput[layersOutput.Length - 1].Subtract(YTrain[d]);
                 info.TrainLoss += _loss.CalcLoss(error);
                 info.TrainAccuracy = _accuracy.CalcAccuracy(layersOutput[layersOutput.Length - 1], YTrain[d]);
-                _fitOpt.OperateLearn(XTrain[d], layersOutput, _layers, error, trainSpeed, curEpoch);
+                //_fitOpt.OperateLearn(XTrain[d], layersOutput, _layers, error, trainSpeed, curEpoch);
                 if (_updateCount != 0 && d != 0 && d % _updateCount == 0)
                 {
                     info.Progress = (float)d / XTrain.Length;
@@ -182,6 +182,7 @@ namespace AntLib.Model
                     OnUpdate?.Invoke(info, _modelNum);
                 }
             }
+            Booster.Sync();
             _accuracy.Reset();
             info.Progress /= XTrain.Length;
             info.TrainLoss /= XTrain.Length;

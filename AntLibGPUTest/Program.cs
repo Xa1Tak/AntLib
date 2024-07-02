@@ -4,17 +4,7 @@ using Accord.Math;
 using ILGPU;
 using ILGPU.Algorithms;
 using ILGPU.Runtime;
-using ComputeSharp;
 
-[ThreadGroupSize(DefaultThreadGroupSizes.X)]
-[GeneratedComputeShaderDescriptor]
-internal partial struct Forward(ReadWriteTexture2D<float> matrixBuffer, ReadWriteTexture1D<float> vectorBuffer, ReadWriteTexture1D<float> resultBuffer) : IComputeShader
-{
-    public void Execute()
-    {
-        resultBuffer[ThreadIds.Y] += matrixBuffer[ThreadIds.XY] * vectorBuffer[ThreadIds.X];
-    }
-}
 
 internal class Program
 {
@@ -55,10 +45,6 @@ internal class Program
         //Console.WriteLine(String.Join(" ", accordResult.Item2));
         Console.WriteLine("-------------------------------------");
 
-        Console.WriteLine("ComputeSharp");
-        var computeResult = CheckComputeSharp(matrix, vector);
-        Console.WriteLine(computeResult.Item1);
-        //Console.WriteLine(String.Join(" ",computeResult.Item2));
         Console.ReadKey();
     }
 
@@ -131,22 +117,6 @@ internal class Program
         }
         sw.Stop();
         return (sw.Elapsed.TotalSeconds, _nextGrad);
-    }
-
-    private static (double, float[]) CheckComputeSharp(float[,] matrix, float[] vector)
-    {
-        float[] result = new float[matrix.GetLength(1)];
-        using ReadWriteTexture2D<float> matrixBuffer = GraphicsDevice.GetDefault().AllocateReadWriteTexture2D(matrix);
-        using ReadWriteTexture1D<float> vectorBuffer = GraphicsDevice.GetDefault().AllocateReadWriteTexture1D(vector);
-        using ReadWriteTexture1D<float> resultBuffer = GraphicsDevice.GetDefault().AllocateReadWriteTexture1D(result);
-
-        var kernel = new Forward(matrixBuffer, vectorBuffer, resultBuffer);
-
-        var sw = Stopwatch.StartNew();
-        GraphicsDevice.GetDefault().For(matrix.GetLength(0), matrix.GetLength(1), kernel);
-        sw.Stop();
-        resultBuffer.CopyTo(result);
-        return (sw.Elapsed.TotalSeconds, result);
     }
 
     private static (double, float[]) CheckILGPU(float[,] maxtrix, float[] vector)

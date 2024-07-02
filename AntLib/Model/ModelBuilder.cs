@@ -64,6 +64,7 @@ namespace AntLib.Model
 
         public IModel BuildParallelModel(int threads)
         {
+            if (Booster.IsBoosted()) return BuildModel();
             IModel result = new ParallelModel(threads);
             result.SetAccuracy(_accuracy);
             result.SetLoss(_loss);

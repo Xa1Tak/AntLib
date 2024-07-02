@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {
+    "net6.0": {
       "Accord/3.8.0": {
         "type": "package",
         "compile": {
@@ -40,122 +40,15 @@
           }
         }
       },
-      "ComputeSharp/3.0.1": {
-        "type": "package",
-        "dependencies": {
-          "ComputeSharp.Core": "3.0.1"
-        },
-        "compile": {
-          "lib/net8.0/ComputeSharp.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/ComputeSharp.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/ComputeSharp.targets": {}
-        }
-      },
-      "ComputeSharp.Core/3.0.1": {
-        "type": "package",
-        "compile": {
-          "lib/net8.0/ComputeSharp.Core.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/ComputeSharp.Core.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/ComputeSharp.Core.targets": {}
-        }
-      },
-      "ComputeSharp.D2D1/3.0.1": {
-        "type": "package",
-        "dependencies": {
-          "ComputeSharp.Core": "3.0.1"
-        },
-        "compile": {
-          "lib/net8.0/ComputeSharp.D2D1.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/ComputeSharp.D2D1.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/ComputeSharp.D2D1.targets": {}
-        }
-      },
-      "ComputeSharp.Dynamic/2.1.0": {
-        "type": "package",
-        "dependencies": {
-          "ComputeSharp": "2.1.0"
-        },
-        "compile": {
-          "lib/net6.0/ComputeSharp.Dynamic.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/ComputeSharp.Dynamic.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtimeTargets": {
-          "runtimes/win-arm64/native/dxcompiler.dll": {
-            "assetType": "native",
-            "rid": "win-arm64"
-          },
-          "runtimes/win-arm64/native/dxil.dll": {
-            "assetType": "native",
-            "rid": "win-arm64"
-          },
-          "runtimes/win-x64/native/dxcompiler.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/dxil.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          }
-        }
-      },
-      "ComputeSharp.Pix/3.0.1": {
-        "type": "package",
-        "dependencies": {
-          "ComputeSharp": "3.0.1"
-        },
-        "compile": {
-          "lib/net8.0/ComputeSharp.Pix.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/ComputeSharp.Pix.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/ComputeSharp.Pix.targets": {}
-        }
-      },
       "ILGPU/1.5.1": {
         "type": "package",
         "compile": {
-          "lib/net7.0/ILGPU.dll": {
+          "lib/net6.0/ILGPU.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net7.0/ILGPU.dll": {
+          "lib/net6.0/ILGPU.dll": {
             "related": ".xml"
           }
         }
@@ -166,12 +59,12 @@
           "ILGPU": "1.5.1"
         },
         "compile": {
-          "lib/net7.0/ILGPU.Algorithms.dll": {
+          "lib/net6.0/ILGPU.Algorithms.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net7.0/ILGPU.Algorithms.dll": {
+          "lib/net6.0/ILGPU.Algorithms.dll": {
             "related": ".xml"
           }
         }
@@ -269,104 +162,6 @@
         "lib/netstandard2.0/Accord.Math.xml"
       ]
     },
-    "ComputeSharp/3.0.1": {
-      "sha512": "MhZnKzZFblvnpl0GPDQbwKhhaBy1KmrRkV5a+Qsp/9yDna4r8BhXgNUpwkk8q61/httnj23eKkcp3Nojm1hIzQ==",
-      "type": "package",
-      "path": "computesharp/3.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "analyzers/dotnet/cs/ComputeSharp.CodeFixers.dll",
-        "analyzers/dotnet/cs/ComputeSharp.SourceGenerators.dll",
-        "build/ComputeSharp.targets",
-        "buildTransitive/ComputeSharp.targets",
-        "computesharp.3.0.1.nupkg.sha512",
-        "computesharp.nuspec",
-        "icon.png",
-        "lib/net8.0/ComputeSharp.dll",
-        "lib/net8.0/ComputeSharp.xml"
-      ]
-    },
-    "ComputeSharp.Core/3.0.1": {
-      "sha512": "sXFBL6fbrV+E9NRIvaCDXO8fxeXrnMWLnPoECu7VjcIKduL3AbQnhKo0rEboQmpbkbFljlqP3xOzsdBkbaBpLA==",
-      "type": "package",
-      "path": "computesharp.core/3.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "analyzers/dotnet/cs/ComputeSharp.Core.SourceGenerators.dll",
-        "build/ComputeSharp.Core.targets",
-        "buildTransitive/ComputeSharp.Core.targets",
-        "computesharp.core.3.0.1.nupkg.sha512",
-        "computesharp.core.nuspec",
-        "icon.png",
-        "lib/net8.0/ComputeSharp.Core.dll",
-        "lib/net8.0/ComputeSharp.Core.xml"
-      ]
-    },
-    "ComputeSharp.D2D1/3.0.1": {
-      "sha512": "wpGh8NSg69xqfU/1WXh2LfHkYh8treMbwmGwIH7v16zGdEQ5dx0eV8LSjade4c9YbGjr3YBQLIpk5dOrpA2U2w==",
-      "type": "package",
-      "path": "computesharp.d2d1/3.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "analyzers/dotnet/cs/ComputeSharp.D2D1.CodeFixers.dll",
-        "analyzers/dotnet/cs/ComputeSharp.D2D1.SourceGenerators.dll",
-        "build/ComputeSharp.D2D1.targets",
-        "buildTransitive/ComputeSharp.D2D1.targets",
-        "computesharp.d2d1.3.0.1.nupkg.sha512",
-        "computesharp.d2d1.nuspec",
-        "icon.png",
-        "lib/net8.0/ComputeSharp.D2D1.dll",
-        "lib/net8.0/ComputeSharp.D2D1.xml"
-      ]
-    },
-    "ComputeSharp.Dynamic/2.1.0": {
-      "sha512": "QeKJdT4UMMGfXr8DcQJJsTN3q0V15HlVGnXHURqlIbU16xkNhCENPwu5hPnG5hsjvuaNQxOTD2HH00YbiFP0YQ==",
-      "type": "package",
-      "path": "computesharp.dynamic/2.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "computesharp.dynamic.2.1.0.nupkg.sha512",
-        "computesharp.dynamic.nuspec",
-        "icon.png",
-        "lib/net6.0/ComputeSharp.Dynamic.dll",
-        "lib/net6.0/ComputeSharp.Dynamic.xml",
-        "lib/netstandard2.0/ComputeSharp.Dynamic.dll",
-        "lib/netstandard2.0/ComputeSharp.Dynamic.xml",
-        "runtimes/win-arm64/native/dxcompiler.dll",
-        "runtimes/win-arm64/native/dxil.dll",
-        "runtimes/win-x64/native/dxcompiler.dll",
-        "runtimes/win-x64/native/dxil.dll"
-      ]
-    },
-    "ComputeSharp.Pix/3.0.1": {
-      "sha512": "nDQ570Fx4Fu3efTHACBQuBjxwtzEvJKTDb2T/nmKrLP0djNB8pzHE8KClInwmTDIAdMRJxiTxQe7CTzqa53TDQ==",
-      "type": "package",
-      "path": "computesharp.pix/3.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.txt",
-        "README.md",
-        "build/ComputeSharp.Pix.targets",
-        "buildTransitive/ComputeSharp.Pix.targets",
-        "computesharp.pix.3.0.1.nupkg.sha512",
-        "computesharp.pix.nuspec",
-        "icon.png",
-        "lib/net8.0/ComputeSharp.Pix.dll",
-        "lib/net8.0/ComputeSharp.Pix.xml",
-        "winpixeventruntime.1.0.231030001/arm64/WinPixEventRuntime.dll",
-        "winpixeventruntime.1.0.231030001/arm64/WinPixEventRuntime_UAP.dll",
-        "winpixeventruntime.1.0.231030001/x64/WinPixEventRuntime.dll",
-        "winpixeventruntime.1.0.231030001/x64/WinPixEventRuntime_UAP.dll"
-      ]
-    },
     "ILGPU/1.5.1": {
       "sha512": "Q4URSxEqH+u0XE3XCtYZ2h3FZgLp9VOOeelvKCmniiTlKft0JNCs13EOqayWVjwvPUbD4w/XaFlP3CdmaRdj8w==",
       "type": "package",
@@ -417,14 +212,9 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net8.0": [
+    "net6.0": [
       "Accord >= 3.8.0",
       "Accord.Math >= 3.8.0",
-      "ComputeSharp >= 3.0.1",
-      "ComputeSharp.Core >= 3.0.1",
-      "ComputeSharp.D2D1 >= 3.0.1",
-      "ComputeSharp.Dynamic >= 2.1.0",
-      "ComputeSharp.Pix >= 3.0.1",
       "ILGPU.Algorithms >= 1.5.1"
     ]
   },
@@ -450,15 +240,15 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net8.0"
+        "net6.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "projectReferences": {}
         }
       },
@@ -474,8 +264,8 @@
       }
     },
     "frameworks": {
-      "net8.0": {
-        "targetAlias": "net8.0",
+      "net6.0": {
+        "targetAlias": "net6.0",
         "dependencies": {
           "Accord": {
             "target": "Package",
@@ -484,26 +274,6 @@
           "Accord.Math": {
             "target": "Package",
             "version": "[3.8.0, )"
-          },
-          "ComputeSharp": {
-            "target": "Package",
-            "version": "[3.0.1, )"
-          },
-          "ComputeSharp.Core": {
-            "target": "Package",
-            "version": "[3.0.1, )"
-          },
-          "ComputeSharp.D2D1": {
-            "target": "Package",
-            "version": "[3.0.1, )"
-          },
-          "ComputeSharp.Dynamic": {
-            "target": "Package",
-            "version": "[2.1.0, )"
-          },
-          "ComputeSharp.Pix": {
-            "target": "Package",
-            "version": "[3.0.1, )"
           },
           "ILGPU.Algorithms": {
             "target": "Package",
@@ -526,7 +296,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205\\RuntimeIdentifierGraph.json"
       }
     }
   }

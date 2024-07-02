@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AntLibGPUTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+095a6646fdee3bc722bf436d4b74de972d061b5c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a0087d274ce3e4f55bbf2f026d6f541106e45cdf")]
 [assembly: System.Reflection.AssemblyProductAttribute("AntLibGPUTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AntLibGPUTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

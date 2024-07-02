@@ -2,6 +2,7 @@
 using Accord.Math;
 using AntLib.Model.Layer.LayerOptimizer;
 using AntLib.Tools;
+using ILGPU.Algorithms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -63,8 +64,8 @@ namespace AntLib.Model.Layer.Optimizer
 
         public DataArray Backward(DataArray errorData, DataArray inputData, DataArray outputData, float trainSpeed, int epoch)
         {
-            float bb1Pow = 1 - (float)Math.Pow(_b1, epoch);
-            float bb2Pow = 1 - (float)Math.Pow(_b2, epoch);
+            float bb1Pow = 1 - XMath.Pow(_b1, epoch);
+            float bb2Pow = 1 - XMath.Pow(_b2, epoch);
             _nextGrad.Clear();
             float[] e = errorData.GetArray1D();
             float[] input = inputData.GetArray1D();
@@ -75,14 +76,14 @@ namespace AntLib.Model.Layer.Optimizer
                 _correction2[i] = _correction[i] * _correction[i];
                 _vtBias[i] = _b2 * _vtBias[i] + (_bb2 * _correction2[i]);
                 _mtBias[i] = _b1 * _mtBias[i] + (_bb1 * _correction[i]);
-                _bias[i] -= trainSpeed * ((_mtBias[i] / bb1Pow) / ((float)Math.Sqrt((_vtBias[i] / bb2Pow) + _e)));
+                _bias[i] -= trainSpeed * ((_mtBias[i] / bb1Pow) / (XMath.Sqrt((_vtBias[i] / bb2Pow) + _e)));
 
                 for (int k = 0; k < _weights.GetLength(0); k++)
                 {
                     _nextGrad[k] += _weights[k, i] * _correction[i];
                     _vtWeights[k, i] = _b2 * _vtWeights[k, i] + (_bb2 * _correction2[i] * input[k] * input[k]);
                     _mtWeights[k, i] = _b1 * _mtWeights[k, i] + (_bb1 * _correction[i] * input[k]);
-                    _weights[k, i] -= trainSpeed * ((_mtWeights[k, i] / bb1Pow) / ((float)Math.Sqrt((_vtWeights[k, i] / bb2Pow) + _e)));
+                    _weights[k, i] -= trainSpeed * ((_mtWeights[k, i] / bb1Pow) / (XMath.Sqrt((_vtWeights[k, i] / bb2Pow) + _e)));
                 }
             }
             return new DataArray(_nextGrad);
